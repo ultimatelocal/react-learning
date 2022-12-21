@@ -1,10 +1,8 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const GenericRouter = () => {
-  return (
-    <Outlet/>
-  )
-}
+  return <Outlet />;
+};
 
-export default GenericRouter
+export default GenericRouter;

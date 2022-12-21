@@ -23,9 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "yarn run eslint src --color",
-    "pretty": "prettier --config .prettierrc --write 'src/**/*.tsx' ",
-    "prepare": "husky install"
+    "lint": "eslint src --color",
+    "pretty": "prettier --config .prettierrc --write \"src/**/*.ts(x)\" ",
+    "prepare": "husky install",
+    "pre-push": "yarn lint && yarn pretty && yarn build",
+    "install:clean": "rm -rf node_modules && yarn"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
