@@ -6,7 +6,7 @@ import './category-list.styles.scss';
  const CategoryList = (props:any) => {
   const {categories} = props;
   return (
-    <div className="categories-container">
+    <div className="categories">
         {categories.map((category:Category ) => {
             return (<CategoryItem key={category.id} category={category}/>);
         })}

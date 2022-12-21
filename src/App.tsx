@@ -1,13 +1,15 @@
-import { Outlet } from "react-router-dom";
-import CategoryList from "./components/category/category-list/CategoryList";
-import NavigationBar from "./components/navigation-bar/NavigationBar";
-import { mockCategories } from "./__dummy-data__/categories";
+import { Route, Routes } from "react-router-dom";
+import Navigation from "./components/navigation/Navigation";
+import Home from "./pages/home/Home";
 
 const App = () => {
- return <>
-   <NavigationBar/>
-   <Outlet/>
- </>
+  return (
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
