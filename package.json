@@ -30,7 +30,7 @@
     "install:clean": "rm -rf node_modules && yarn"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "yarn pre-push"
   },
   "eslintConfig": {
     "extends": [
