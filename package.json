@@ -26,8 +26,9 @@
     "lint": "eslint src --color",
     "pretty": "prettier --config .prettierrc --write \"src/**/*.ts(x)\" ",
     "prepare": "husky install",
-    "pre-push": "yarn lint && yarn pretty && yarn build",
-    "install:clean": "rm -rf node_modules && yarn"
+    "pre-push": "yarn pretty && yarn lint && yarn build",
+    "install:mac": "rm -rf node_modules && yarn",
+    "install:windows": "rd /s /q node_modules && yarn"
   },
   "lint-staged": {
     "**/*": "yarn pre-push"
@@ -54,6 +55,7 @@
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "eslint": "^8.30.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
